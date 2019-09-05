@@ -1,0 +1,32 @@
+<!--pages/share/share.wxml-->
+<view>
+  <image src="{{img}}" mode="widthFix" class='bgImg'></image>
+  <view class="shareText">
+    <text class='text'>从前从前有个人爱你很久，但偏偏风渐渐把距离吹的好远。</text>
+    <text class='text text2'> ———— 周杰伦《晴天》</text>
+  </view>
+  
+  <view class='imgBox'>
+    <button open-type="share" class='zfbtn'>
+      <image src="{{wechat}}" class='img'></image>
+       <text class='btntxt'>分享给朋友</text>
+    </button>
+    <button class='zfbtn m_l' bindtap='formSubmit'>
+      <image src="{{xiazai}}" class='img'></image>
+      <text class='btntxt'>生成海报</text>
+    </button>
+  </view>
+
+  <!--生成海报  -->
+   <!-- <view class="img-box">
+        
+    </view> -->
+    <view class='imagePathBox' hidden="{{maskHidden == false}}">
+      <image src="{{imagePath}}" class='shengcheng'></image>
+      <button class='baocun' bindtap='baocun'>保存相册，分享到朋友圈</button>
+    </view>
+   <view hidden="{{maskHidden == false}}" class="mask"></view> 
+  <view class="canvas-box">
+      <canvas  style="width: 375px;height: 667px;position:fixed;top:9999px" canvas-id="mycanvas"/>
+  </view>  
+</view>
